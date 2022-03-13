@@ -6,6 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WPVABR\\Includes\\' => array($baseDir . '/includes'),
     'WPVABR\\Api\\' => array($baseDir . '/api'),
 );

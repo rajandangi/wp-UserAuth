@@ -8,7 +8,6 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "WPVABR\\Includes\\": "includes/",
             "WPVABR\\Api\\": "api/"
         }
     },

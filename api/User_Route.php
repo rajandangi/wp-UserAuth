@@ -121,11 +121,7 @@ class User_Route extends WP_REST_Controller
 
                 if ($error_code == 'invalid_username') {
                     $error = 'Invalid username.';
-                }
-
-                // Incorrect password.
-                // Default: '<strong>ERROR</strong>: The password you entered for the username <strong>%1$s</strong> is incorrect. <a href="%2$s">Lost your password</a>?'
-                else if ($error_code == 'incorrect_password') {
+                } else if ($error_code == 'incorrect_password') {
                     $error = 'The password you entered is incorrect.';
                 } else {
                     $error = $user->get_error_message($error_code);
@@ -197,7 +193,6 @@ class User_Route extends WP_REST_Controller
 
 
             //Not error
-
             global $wpdb;
             $user_login_sql = "select count(*) from $wpdb->prefix" . "users us
                                         where SUBSTR(us.user_email,1, INSTR(us.user_email,'@')-1)= %s";
@@ -230,9 +225,7 @@ class User_Route extends WP_REST_Controller
 
     public function func_user_logout($request)
     {
-        // $response_body = $request->get_json_params();
         wp_logout();
-        //$response_data = array('status' => '403', 'error_code' => 'logout_error', 'error_message' => 'Unable to logout');
         $response_data = array('message' => 'Success');
         $data[] = $this->prepare_response_for_collection($response_data);
         return rest_ensure_response($data);
@@ -240,9 +233,7 @@ class User_Route extends WP_REST_Controller
 
     public function func_user_cookies($request)
     {
-        // $response_body = $request->get_json_params();
         wp_logout();
-        //$response_data = array('status' => '403', 'error_code' => 'logout_error', 'error_message' => 'Unable to logout');
         $response_data = array('message' => 'Success');
         $data[] = $this->prepare_response_for_collection($response_data);
         return rest_ensure_response($data);
@@ -253,10 +244,6 @@ class User_Route extends WP_REST_Controller
      */
     public function get_items_permission_check($request)
     {
-        // if( current_user_can( 'administrator' ) ) {
-        //     return true;
-        // }
-
         return true;
     }
 

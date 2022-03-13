@@ -12,21 +12,18 @@
  * Text-Domain: textdomain
  */
 
-if (!defined('ABSPATH')) exit(); // No direct access allowed
+/**
+ * No direct access allowed  
+ */
+if (!defined('ABSPATH')) exit();
 
 
 /**
- * Require Autoloader
+ * Require Auto-Loader
  */
-require_once 'vendor/autoload.php';
+// require_once 'vendor/autoload.php';
 
 use WPVABR\Api\Api;
-
-// use WPVBR\Includes\Admin;
-// use WPVBR\Includes\Frontend;
-// use WPVBR\Includes\PageTemplater;
-
-
 
 final class WP_Vue_API_BR
 {
@@ -60,7 +57,7 @@ final class WP_Vue_API_BR
     }
 
     /**
-     * Singletone Instance
+     * Single tone Instance
      * @since 1.0.0
      */
     public static function init()
@@ -104,11 +101,7 @@ final class WP_Vue_API_BR
      */
     public function init_plugin()
     {
-        // init
-        // new Admin();
-        //new Frontend();
         new Api();
-        // new PageTemplater();
     }
 }
 
