@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) exit();
 /**
  * Require Auto-Loader
  */
-// require_once 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 use WPVABR\Api\Api;
 
