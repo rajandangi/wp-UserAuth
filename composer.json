@@ -1,0 +1,16 @@
+{
+    "name": "creation/wp-vue-api-br",
+    "description": "An WordPress Vue API plugin For BR.",
+    "authors": [{
+        "name": "Bam Kadayat",
+        "email": "bamkadayat@gmail.com"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WPVABR\\Includes\\": "includes/",
+            "WPVABR\\Api\\": "api/"
+        }
+    },
+    "require-dev": {}
+}
