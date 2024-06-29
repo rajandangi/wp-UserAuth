@@ -1,0 +1,15 @@
+{
+    "name": "creation/wp-vue-api-br",
+    "description": "An WordPress Vue API plugin for WordPress",
+    "authors": [{
+        "name": "Rajan Dangi",
+        "email": "contact@rajandangi.com.np"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WPVABR\\Api\\": "api/"
+        }
+    },
+    "require-dev": {}
+}
